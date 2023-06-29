@@ -1,0 +1,77 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- <base href="<%=basePath%>"> -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" id="templatecss" type="text/css"
+	href="../../static/css/basic-grey.css">
+<title>欢迎，{{session}}</title>
+<style>
+    div.fixed{
+    position : fixed;
+ 	top : 0;
+ 	right : 5px;
+	text-align: start;
+	padding: 5px;
+}
+</style>
+</head>
+<form action="/userdb/" method="post" class="basic-grey">
+	{% csrf_token %}
+<label style="color: rgba(181,181,181,1);padding-top: 1px">tips:在浏览器的页面里直接使用快捷键可以打开快捷菜单</label>
+	<h1>欢迎，{{session}}</h1>
+    
+    <label >
+        <input type="button" class="button" value="返回贴吧首页" name="VIEW" style="margin-left:38%" onclick="javascrtpt:window.location.href='http://tieba.baidu.com'"/>
+   
+       <!-- </label>
+       <label > -->
+        <input type="submit" class="button" value="注销" name="LOGOUT" style="margin-left:43%; margin-top: 5%;" />
+   
+       </label>
+
+
+<!--	<label> <span>更换主题 :</span> <select id="template"-->
+<!--		name="themplate" onchange="changeStyle();">-->
+
+<!--			<option value="basic-grey">基本灰</option>-->
+
+<!--			<option value="elegant-aero">优雅蓝</option>-->
+
+<!--			<option value="smart-green">智慧绿</option>-->
+
+<!--			<option value="white-pink">白梦粉</option>-->
+
+<!--			<option value="bootstrap-frm">简单白</option>-->
+
+<!--			<option value="dark-matter">物质黑</option>-->
+
+<!--	</select>-->
+
+	
+
+</form>
+<p>{{ rlt }}</p>
+<script>
+ 
+            function changeStyle() {
+ 
+            var template = document.getElementById("template");
+ 
+     		var index = template.selectedIndex;
+ 
+            var templatevalue = template.options[index].value;
+ 
+            var templatecss = document.getElementById("templatecss");
+ 
+            templatecss.setAttribute("href", "css/" + templatevalue + ".css");
+ 
+            document.getElementsByTagName("form")[0].setAttribute("class",templatevalue);
+ 
+          }
+ 
+         </script>
+
+</html>

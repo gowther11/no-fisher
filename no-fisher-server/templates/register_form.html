@@ -1,0 +1,74 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- <base href="<%=basePath%>"> -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" id="templatecss" type="text/css"
+	href="../../static/css/basic-grey.css">
+<title>欢迎注册渔夫去质器！</title>
+
+</head>
+
+<form action="/register/" method="post" class="basic-grey">
+	{% csrf_token %}
+<label style="color: rgba(181,181,181,1);padding-top: 1px">tips:在浏览器的页面里直接使用快捷键可以打开快捷菜单</label>
+	<h1>
+		欢迎注册<br>渔夫去质器
+	</h1>
+
+<!--	<label> <span>更换主题 :</span> <select id="template"-->
+<!--		name="themplate" onchange="changeStyle();">-->
+
+<!--			<option value="basic-grey">基本灰</option>-->
+
+<!--			<option value="elegant-aero">优雅蓝</option>-->
+
+<!--			<option value="smart-green">智慧绿</option>-->
+
+<!--			<option value="white-pink">白梦粉</option>-->
+
+<!--			<option value="bootstrap-frm">简单白</option>-->
+
+<!--			<option value="dark-matter">物质黑</option>-->
+
+<!--	</select>-->
+
+	</label> <label> <span>账号 </span> <input id="name" type="text"
+		name="ID" placeholder="请输入账号注册" />
+		<a style="color: red;">{{ rlt_id }}</a>
+	</label> <label> <span>密码 </span> <input id="password" type="password"
+		name="Password" placeholder="大小写字母、数字、符号" />
+		<a style="color: red;">{{ rlt_pass }}</a>
+	</label> 
+
+	<label >
+	 <input type="submit"
+		class="button" value="注册" style="margin-left:40%"/>
+
+	</label>
+
+	<p>{{ rlt }}</p>
+</form>
+<script>
+ 
+            function changeStyle() {
+ 
+            var template = document.getElementById("template");
+ 
+     		var index = template.selectedIndex;
+ 
+            var templatevalue = template.options[index].value;
+ 
+            var templatecss = document.getElementById("templatecss");
+ 
+            templatecss.setAttribute("href", "css/" + templatevalue + ".css");
+ 
+            document.getElementsByTagName("form")[0].setAttribute("class",templatevalue);
+ 
+          }
+ 
+         </script>
+
+</html>

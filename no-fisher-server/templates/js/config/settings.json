@@ -1,0 +1,9 @@
+{
+    "settings":{
+        "pluginOn":1,
+        "autoStyle":3,
+        "autoLevel":1,
+        "autoShield": 1,
+        "join":0
+    }
+}
