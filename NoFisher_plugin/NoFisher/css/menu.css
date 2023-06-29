@@ -1,0 +1,97 @@
+.menu {
+    width: 300px;
+    height: 300px;
+    /*border:1px solid blue;*/
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    border-radius: 50%;
+    border: 2px solid black;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.menu li {
+    overflow: hidden;
+	position: absolute;
+	top: 0; 
+    right: 0;
+	width: 50%;
+    height: 50%;
+	transform-origin: 0% 100%;
+}
+
+.menu li a:hover {
+    /* background: -webkit-radial-gradient(left bottom, transparent 0, #2e2e2e 35%); */
+    /* font-size: 40px; */
+    color: red;
+    transform-origin: 0 1;
+    transform: scale(1.4);
+    box-shadow:  1px 4px 10px 2px #ccc;
+}
+
+.menu li a {
+    display: block;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    /* background: -webkit-radial-gradient(left bottom, transparent 0%, #eee 35%); */
+    font-size: 30px;
+    line-height: 30px; 
+    color: black;
+}
+
+.menu li:nth-child(1) {
+    transform: rotate(15deg) skew(-15deg, -15deg);
+}
+
+.menu li:nth-child(2) {
+    transform: rotate(-45deg) skew(-15deg, -15deg);
+}
+
+.menu li:nth-child(3) {
+    transform: rotate(-105deg) skew(-15deg, -15deg);
+}
+
+.menu li:nth-child(4) {
+    transform: rotate(-165deg) skew(-15deg, -15deg);
+}
+.menu li:nth-child(5) {
+    transform: rotate(-225deg) skew(-15deg, -15deg);
+}
+.menu li:nth-child(6) {
+    transform: rotate(-285deg) skew(-15deg, -15deg);
+}
+
+.menu li:nth-child(7) {
+    border-radius: 100%;
+    transform: scale(0.9);
+    left: 27.5%;
+    top: 27.5%;
+    transform-origin: 0 0;
+}
+
+.menu li:nth-child(7) a {
+    background: url(https://img1.baidu.com/it/u=909956818,1992746942&fm=26&fmt=auto);
+    background-color: red;
+    background-size: 100% 100%;
+    border-radius: 100%;
+}
+
+.menu li:nth-child(7) a:hover {
+    /* background: white; */
+    border-radius: 100%;
+}
+
+.icon {
+    position:absolute;
+    left: 16px;
+    bottom: 16px;
+    opacity: 0.7;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    /* background: url(../img/mes.png); */
+    transform: skew(15deg, 15deg) rotate(45deg);
+}
